@@ -1,0 +1,19 @@
+* 目标
+
+** 使用spm+swift工具开发学习基础语法, 兼容termux
+:PROPERTIES:
+:toggl-project: Work
+:END:
+:LOGBOOK:
+CLOCK: [2022-10-16 周日 10:08]
+:END:
+
+新建项目spi
+添加依赖集成(目的在termux能够正常使用的库)
+quick
+命令解析行
+开发一个接受入参数的命令工具
+
+** 发布到github上，支持action集成功能
+
+** 总结xcodebuild和swift test 之间使用场景
