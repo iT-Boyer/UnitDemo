@@ -24,3 +24,6 @@ alamofire
 ** 发布到github上，支持action集成功能
 
 ** 总结xcodebuild和swift test 之间使用场景
+
+https://www.swift.org/getting-started/#using-the-repl
+https://www.swift.org/blog/swiftpm-repl-support/
