@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "fastlane",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/it-boyer/fastlane.git",
+      "state" : {
+        "branch" : "public",
+        "revision" : "567bd494f2f9de36d97733da99c6b46923112c09"
+      }
+    },
+    {
       "identity" : "quick",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Quick/Quick.git",
@@ -16,6 +25,15 @@
       "state" : {
         "revision" : "9f39744e025c7d377987f30b03770805dcb0bcd1",
         "version" : "1.1.4"
+      }
+    },
+    {
+      "identity" : "swiftshell",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kareman/SwiftShell",
+      "state" : {
+        "revision" : "99680b2efc7c7dbcace1da0b3979d266f02e213c",
+        "version" : "5.1.0"
       }
     }
   ],
