@@ -20,4 +20,4 @@ jobs:
     - name: Build for macOS
       run: swift build -v
     - name: Run macOS tests
-      run: set -o pipefail && swift test -v | xcpretty
+      run: swift test
