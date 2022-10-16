@@ -11,14 +11,15 @@ let package = Package(
       .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
       .package(url: "https://github.com/Quick/Quick.git", from: "5.0.0"),
 //      .package(url: "https://github.com/Quick/Nimble.git", from: "10.0.0")
-      .package(name: "Fastlane", url: "https://github.com/it-boyer/fastlane.git", branch: "public"),
+      .package(url: "https://github.com/it-boyer/fastlane.git", branch: "public"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .executableTarget(
             name: "UnitDemo",
-            dependencies: ["Fastlane", .product(name: "ArgumentParser", package: "swift-argument-parser")]),
+            dependencies: [.product(name: "Fastlane", package: "fastlane"),
+                           .product(name: "ArgumentParser", package: "swift-argument-parser")]),
         .testTarget(
             name: "UnitDemoTests",
             dependencies: ["UnitDemo","Quick"]),
