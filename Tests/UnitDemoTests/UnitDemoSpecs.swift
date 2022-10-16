@@ -1,5 +1,6 @@
 import XCTest
 import Quick
+@testable import UnitLib
 
 class UnitDemoSpecs:QuickSpec {
     override func spec(){
@@ -8,5 +9,11 @@ class UnitDemoSpecs:QuickSpec {
                 print("不支持Nimble")
             }
         }
+        describe("库嵌套"){
+            it("UnitLib"){
+                hello()
+            }
+        }
+
     }
 }

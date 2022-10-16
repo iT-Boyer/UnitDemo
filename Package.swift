@@ -5,6 +5,11 @@ import PackageDescription
 
 let package = Package(
     name: "UnitDemo",
+    products: [
+      .executable(name: "Unit", targets: ["UnitDemo"]),
+      .library(name: "UnitLib", targets: ["UnitLib"])
+    ],
+
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
@@ -16,7 +21,8 @@ let package = Package(
      // .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", from: "5.0.1"),
         .package(url: "https://github.com/kareman/SwiftShell", .upToNextMajor(from: "5.1.0")),
         .package(url: "https://github.com/sharplet/Regex",.upToNextMajor(from: "2.1.1")),
-        .package(url: "https://github.com/groue/GRDB.swift.git", from: "5.17.0"),
+        //.package(url: "https://github.com/groue/GRDB.swift.git", from: "5.17.0"),
+        //.package(path: "/Users/boyer/hsg/GRDB.swift"),
 
     ],
     targets: [
@@ -30,10 +36,12 @@ let package = Package(
                         //   "SwiftyJSON",
                         "SwiftShell",
                         "Regex",
-                        "GRDB",
-                           .product(name: "ArgumentParser", package: "swift-argument-parser")]),
+                        //.product(name: "GRDB", package: "GRDB.swift"),
+                        .product(name: "ArgumentParser", package: "swift-argument-parser")]),
+
+        .target(name: "UnitLib",dependencies: ["SwiftShell", "Regex"]),
         .testTarget(
             name: "UnitDemoTests",
-            dependencies: ["UnitDemo","Quick"]),
+            dependencies: ["UnitDemo", "UnitLib","Quick"]),
     ]
 )
