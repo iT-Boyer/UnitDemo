@@ -1,11 +1,10 @@
 import Quick
-import Nimble
 
-class UnitDemoSpec:QuickSpec {
+class UnitDemoSpecs:QuickSpec {
     override func spec(){
-        describe("测试"){
+        describe("kkj"){
             it("hha"){
-                print("测试")
+                print("testttt")
             }
         }
     }

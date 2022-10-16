@@ -10,7 +10,7 @@ let package = Package(
         // .package(url: /* package url */, from: "1.0.0"),
       .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
       .package(url: "https://github.com/Quick/Quick.git", from: "5.0.0"),
-      .package(url: "https://github.com/Quick/Nimble.git", from: "10.0.0")
+//      .package(url: "https://github.com/Quick/Nimble.git", from: "10.0.0")
 
     ],
     targets: [
@@ -21,6 +21,6 @@ let package = Package(
             dependencies: [.product(name: "ArgumentParser", package: "swift-argument-parser")]),
         .testTarget(
             name: "UnitDemoTests",
-            dependencies: ["UnitDemo","Quick", "Nimble"]),
+            dependencies: ["UnitDemo","Quick"]),
     ]
 )
