@@ -1,0 +1,23 @@
+name: CI
+# 触发条件
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches:
+      - '*'
+# 执行的任务
+jobs:
+  unit_tests:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup Swift
+      uses: swift-actions/setup-swift@v1.18.0
+    - name: Repository checkout
+      uses: actions/checkout@v2
+    - name: Lint
+      run: swiftlint
+    - name: Build for macOS
+      run: swift build -v
+    - name: Run macOS tests
+      run: set -o pipefail && swift test -v | xcpretty
