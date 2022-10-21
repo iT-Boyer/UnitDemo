@@ -8,12 +8,10 @@ inputs:
 runs:
   using: "composite"  #Required You must set this value to 'composite'.
   steps:
-    - run: pwd && ls
-      shell: bash
     - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
       shell: bash
     - if: ${{ inputs.argOne }} == 'build'
-      run: pwd && ls && swift build
+      run: cd ${{ github.action_path }} && swift build
       shell: bash
     - if: ${{ inputs.argOne }} == 'test'
       run: swift test
