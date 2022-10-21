@@ -1,23 +1,16 @@
-name: 'Hello World'
-description: 'Greet someone'
+name: 'UnitDemo'
+description: '目标是让swift语言成为工作流的工具库瑞士军刀，协助更好的应用githubworkflow'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  argOne:  # id of input
+    description: '编译或单元测试'
     required: true
-    default: 'World'
-outputs:
-  random-number:
-    description: "Random number"
-    value: ${{ steps.random-number-generator.outputs.random-number }}
+    default: 'build'
 runs:
   using: "composite"
   steps:
-    - run: echo Hello ${{ inputs.who-to-greet }}.
+    - if: ${{ inputs.argOne }} == 'build'
+      run: swift build
       shell: bash
-    - id: random-number-generator
-      run: echo "random-number=$(echo $RANDOM)" >> $GITHUB_OUTPUT
-      shell: bash
-    - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
-      shell: bash
-    - run: hello.sh
+    - if: ${{ inputs.argOne }} == 'test'
+      run: swift test
       shell: bash
