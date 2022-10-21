@@ -12,10 +12,11 @@ runs:
       shell: bash
     - if: ${{ inputs.argOne == 'build' }}
       run: |
-        cd ${{ github.action_path }}
+        #/Users/runner/work/_actions/it-boyer/UnitDemo/main/Sources/UnitLib/Test
+        cd ${{ github.action_path }} #$GITHUB_ACTION_PATH/script.sh
         swift build
-        ls -al .build/x86_64-apple-macosx/debug/
-        .build/x86_64-apple-macosx/debug/UnitDemo lane hello
+        ln -sf .build/x86_64-apple-macosx/debug/Unit Unit
+        Unit lane hello
       shell: bash
     - if: ${{ inputs.argOne == 'test'}}
       run: swift test
