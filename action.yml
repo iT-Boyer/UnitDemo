@@ -5,10 +5,6 @@ inputs:
     description: '编译或单元测试'
     required: true
     default: 'build'
-outputs:
-  random-number:
-    description: "Random number"
-    value: ${{ steps.random-number-generator.outputs.random-number }}
 runs:
   using: "安装unit工具"
   steps:
