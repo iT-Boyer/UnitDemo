@@ -10,7 +10,7 @@ outputs:
     description: "Random number"
     value: ${{ steps.random-number-generator.outputs.random-number }}
 runs:
-  using: "安装unit工具${{ inputs.argOne }}"
+  using: "安装unit工具"
   steps:
     - if: ${{ inputs.argOne }} == 'build'
       run: swift build
