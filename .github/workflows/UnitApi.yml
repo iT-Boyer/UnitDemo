@@ -1,0 +1,21 @@
+name: API外部使用案例
+# 触发条件
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches:
+      - '*'
+# 执行的任务
+jobs:
+  unit_tests:
+    runs-on: macos-latest
+    steps:
+    - name: Setup Swift
+      uses: swift-actions/setup-swift@v1.18.0
+    - name: Repository checkout
+      uses: actions/checkout@v2
+    - name: Build for macOS
+      uses: it-boyer/UnitDemo@main
+      with:
+        argOne: 'build'
