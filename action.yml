@@ -14,7 +14,7 @@ runs:
       run: |
         cd ${{ github.action_path }}
         swift build
-        ls -al
+        ls -al .build/x86_64-apple-macosx/debug/
         .build/x86_64-apple-macosx/debug/UnitDemo lane hello
       shell: bash
     - if: ${{ inputs.argOne == 'test'}}
