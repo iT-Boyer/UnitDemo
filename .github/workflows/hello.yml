@@ -8,7 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: foo
-        uses: it-boyer/UnitDemo@main
+        #uses: it-boyer/UnitDemo@v1 #使用tag
+        #uses: it-boyer/UnitDemo@main #使用分支
+        uses: ./.github/actions/hello #使用本地文件action
         with:
           who-to-greet: 'Mona the Octocat'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
