@@ -11,8 +11,7 @@ runs:
     - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
       shell: bash
     - if: ${{ inputs.argOne == 'build' }}
-      run: cd ${{ github.action_path }} && swift build &&
-       echo "${{ github.action_path }}/.build/x86_64-apple-macosx/debug" >> $GITHUB_PATH
+      run: cd ${{ github.action_path }} && swift build && .build/x86_64-apple-macosx/debug/UnitDemo lane hello && echo "${{ github.action_path }}/.build/x86_64-apple-macosx/debug" >> $GITHUB_PATH
       shell: bash
     - if: ${{ inputs.argOne == 'test'}}
       run: swift test
