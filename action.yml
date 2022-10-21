@@ -6,10 +6,14 @@ inputs:
     required: true
     default: 'build'
 runs:
-  using: "composite"
+  using: "composite"  #Required You must set this value to 'composite'.
   steps:
+    - run: pwd && ls
+      shell: bash
+    - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
+      shell: bash
     - if: ${{ inputs.argOne }} == 'build'
-      run: swift build
+      run: pwd && ls && swift build
       shell: bash
     - if: ${{ inputs.argOne }} == 'test'
       run: swift test
