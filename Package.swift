@@ -36,6 +36,7 @@ let package = Package(
                         //   "SwiftyJSON",
                         "SwiftShell",
                         "Regex",
+                        "UnitLib",
                         //.product(name: "GRDB", package: "GRDB.swift"),
                         .product(name: "ArgumentParser", package: "swift-argument-parser")]),
 

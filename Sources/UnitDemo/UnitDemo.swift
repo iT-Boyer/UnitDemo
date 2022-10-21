@@ -1,5 +1,5 @@
 import ArgumentParser
-
+import UnitLib
 @main
 //MARK: 定义自命令 struct结构体
 struct HelloUnit:ParsableCommand {
@@ -19,6 +19,8 @@ struct HelloUnit:ParsableCommand {
     //MARK: 校验
     func run() throws {
         //MARK: 命令操作
-        print("正在测试unit命令: \(arg!)")
+        print("+++正在测试unit命令: \(arg!)")
+       hello()
+        print("--正在测试unit命令: \(arg!)")
     }
 }
