@@ -27,3 +27,5 @@ jobs:
       run: swift build -v
     - name: Run macOS tests
       run: swift test
+    - name: 安装brew插件
+      run: brew bundle
