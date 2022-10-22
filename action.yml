@@ -16,7 +16,7 @@ runs:
         cd ${{ github.action_path }} #$GITHUB_ACTION_PATH/script.sh
         swift build
         ln -sf .build/debug/Unit Unit
-        Unit --a 哈哈
+        #Unit --a 哈哈
       shell: bash
     - if: ${{ inputs.argOne == 'test'}}
       run: swift test
