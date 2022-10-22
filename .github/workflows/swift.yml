@@ -9,7 +9,7 @@ on:
 # 执行的任务
 jobs:
   unit_tests:
-    runs-on: ubuntu-latest
+    runs-on: [macos-latest, ubuntu-latest]
     steps:
     - name: Setup Swift
       uses: swift-actions/setup-swift@v1.18.0
