@@ -12,7 +12,7 @@ runs:
       shell: bash
     - if: ${{ inputs.argOne == 'build' }}
       run: |
-        #/Users/runner/work/_actions/it-boyer/UnitDemo/main/Sources/UnitLib/Test
+        #/Users/runner/work/_actions/it-boyer/UnitDemo/main/
         cd ${{ github.action_path }} #$GITHUB_ACTION_PATH/script.sh
         swift build
         ln -sf .build/debug/Unit Unit
