@@ -1,5 +1,6 @@
 import XCTest
 import Quick
+import SwiftShell
 @testable import UnitLib
 
 class UnitDemoSpecs:QuickSpec {
@@ -15,5 +16,17 @@ class UnitDemoSpecs:QuickSpec {
             }
         }
 
+        describe("测试SwiftShell"){
+
+            it("在fastlane中不执行的操作"){
+                let shell = """
+                    pwd
+                    ls
+                    echo "hello"
+                  """
+                let out = SwiftShell.run(bash:shell).stdout
+                print("打印：\(out)")
+            }
+        }
     }
 }

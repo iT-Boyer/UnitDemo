@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Unit",
+            "program": "${workspaceFolder:UnitDemo}/.build/debug/Unit",
+            "args": [],
+            "cwd": "${workspaceFolder:UnitDemo}",
+            "preLaunchTask": "swift: Build Debug Unit"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release Unit",
+            "program": "${workspaceFolder:UnitDemo}/.build/release/Unit",
+            "args": [],
+            "cwd": "${workspaceFolder:UnitDemo}",
+            "preLaunchTask": "swift: Build Release Unit"
+        }
+    ]
+}
