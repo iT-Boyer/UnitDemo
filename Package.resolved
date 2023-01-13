@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire",
+      "state" : {
+        "branch" : "master",
+        "revision" : "ce7f662709a152e840b130a158b9afef3402e146"
+      }
+    },
+    {
       "identity" : "quick",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Quick/Quick.git",
@@ -23,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-argument-parser",
       "state" : {
-        "revision" : "9f39744e025c7d377987f30b03770805dcb0bcd1",
-        "version" : "1.1.4"
+        "revision" : "fddd1c00396eed152c45a46bea9f47b98e59301d",
+        "version" : "1.2.0"
       }
     },
     {

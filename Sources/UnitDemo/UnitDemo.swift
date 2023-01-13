@@ -1,5 +1,7 @@
+import Foundation
 import ArgumentParser
 import UnitLib
+import Alamofire
 @main
 //MARK: 定义自命令 struct结构体
 struct HelloUnit:ParsableCommand {
@@ -22,5 +24,40 @@ struct HelloUnit:ParsableCommand {
         print("+++正在测试unit命令: \(arg!)")
        hello()
         print("--正在测试unit命令: \(arg!)")
+        let url = "https://httpbin.org/get"
+
+        let param = arg ?? ""
+        if param == "1" {
+            testSession(url: url)
+        }
+        if param == "2" {
+           testAF(url: url)
+        }
+    }
+
+
+    func testSession(url:String) {
+        let semaphore = DispatchSemaphore(value: 0)
+        URLSession.shared.dataTask(with: URL(string: url)!) {data, response, error in
+
+            if error != nil{
+                print(error!)
+            }else{
+                //解析
+                print(response)
+            }
+            semaphore.signal()
+        }.resume()
+        _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+
+    }
+
+    func testAF(url:String) {
+        let semaphore = DispatchSemaphore(value: 0)
+        AF.request(url).response { response in
+            print(response)
+            semaphore.signal()
+        }
+        _ = semaphore.wait(timeout: DispatchTime.distantFuture)
     }
 }
