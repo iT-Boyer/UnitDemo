@@ -9,10 +9,11 @@
 //提供一个算法工具，输入两个数字和一个运算号等出结果值
 //
 class Calculator{
-    func calculater(first:Double ,second:Double, opt:String) -> Int {
-        var result = 0
+    func calculater(first:Double ,second:Double, opt:String) -> Double {
+        var result:Double = 0.0
         if opt == "+" {
             result = first + second
         }
+        return result
     }
 }
