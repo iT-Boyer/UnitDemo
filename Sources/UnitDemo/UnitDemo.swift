@@ -52,6 +52,7 @@ struct HelloUnit:ParsableCommand {
 
     }
 
+    //af 阻塞同步执行无法使用信号量，导致卡住。
     func testAF(url:String) {
         let semaphore = DispatchSemaphore(value: 0)
         AF.request(url).response { response in
