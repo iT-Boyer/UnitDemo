@@ -3,6 +3,7 @@ import Quick
 import Nimble
 import SwiftShell
 @testable import UnitLib
+@testable import UnitDemo
 
 class UnitDemoSpecs:QuickSpec {
     override func spec(){
@@ -15,6 +16,15 @@ class UnitDemoSpecs:QuickSpec {
         describe("库嵌套"){
             it("UnitLib"){
                 hello()
+            }
+
+            it("AF 测试"){
+                let url = "https://httpbin.org/get"
+                waitUntil(timeout: .seconds(5)) { done in
+                    HelloUnit().testAF(url:url){str in
+                        done()
+                    }
+                }
             }
         }
 
