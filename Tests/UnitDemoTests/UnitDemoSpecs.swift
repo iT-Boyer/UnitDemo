@@ -30,7 +30,7 @@ class UnitDemoSpecs:QuickSpec {
 
         describe("测试SwiftShell"){
 
-            xit("在fastlane中不执行的操作"){
+            it("在fastlane中不执行的操作"){
                 let shell = """
                     pwd
                     ls

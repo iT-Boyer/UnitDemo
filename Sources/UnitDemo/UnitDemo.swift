@@ -32,7 +32,7 @@ struct HelloUnit:ParsableCommand {
             testSession(url: url)
         }
         if param == "2" {
-            testAF(url: url){}
+            testAF(url: url){str in }
         }
     }
 
@@ -54,7 +54,7 @@ struct HelloUnit:ParsableCommand {
     }
 
     //af 阻塞同步执行无法使用信号量，导致卡住。
-    //https://fix.moe/post/alamofire-synchronous
+    //
     // 使用callback 和 Quick 同步方法，实现AF 阻塞
     func testAF(url:String, callBack:@escaping(String)->Void) {
         //let semaphore = DispatchSemaphore(value: 0)
