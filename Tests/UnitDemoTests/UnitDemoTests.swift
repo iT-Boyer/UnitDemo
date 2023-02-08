@@ -7,5 +7,6 @@ final class UnitDemoTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
         // XCTAssertEqual(UnitDemo().text, "Hello, World!")
+        print("hello 世界！")
     }
 }
