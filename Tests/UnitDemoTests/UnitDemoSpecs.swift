@@ -1,5 +1,6 @@
 import XCTest
 import Quick
+import Nimble
 import SwiftShell
 @testable import UnitLib
 
@@ -8,6 +9,7 @@ class UnitDemoSpecs:QuickSpec {
         describe("linux支持"){
             it("Termux执行"){
                 print("不支持Nimble")
+                expect(2 + 1).to(equal(2))
             }
         }
         describe("库嵌套"){
