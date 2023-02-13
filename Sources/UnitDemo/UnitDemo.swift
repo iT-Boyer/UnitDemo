@@ -2,6 +2,7 @@ import Foundation
 import ArgumentParser
 import UnitLib
 import Alamofire
+import PMJSON
 @main
 //MARK: 定义自命令 struct结构体
 struct HelloUnit:ParsableCommand {
@@ -31,7 +32,7 @@ struct HelloUnit:ParsableCommand {
             testSession(url: url)
         }
         if param == "2" {
-           testAF(url: url)
+            testAF(url: url){str in }
         }
     }
 
@@ -51,14 +52,16 @@ struct HelloUnit:ParsableCommand {
         _ = semaphore.wait(timeout: DispatchTime.distantFuture)
 
     }
-
     //af 阻塞同步执行无法使用信号量，导致卡住。
-    func testAF(url:String) {
-        let semaphore = DispatchSemaphore(value: 0)
-        AF.request(url).response { response in
-            print(response)
-            semaphore.signal()
+    // 使用callback 和 Quick 同步方法，实现AF 阻塞
+    func testAF(url:String, callBack:@escaping(String)->Void) {
+        //let semaphore = DispatchSemaphore(value: 0)
+        print("---测试testAF----")
+        AF.request(url).responseString { response in
+            print(" 结果:\(response.value!)")
+            callBack("")
+            //semaphore.signal()
         }
-        _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+        //_ = semaphore.wait(timeout: DispatchTime.distantFuture)
     }
 }

@@ -15,15 +15,13 @@ let package = Package(
         // .package(url: /* package url */, from: "1.0.0"),
       .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
       .package(url: "https://github.com/Quick/Quick.git", from: "5.0.0"),
-      //.package(url: "https://github.com/Quick/Nimble.git", from: "10.0.0"),
-      //.package(url: "https://github.com/it-boyer/fastlane.git", branch: "public"),
+      .package(url: "https://github.com/Quick/Nimble.git", from: "10.0.0"),
+      //.package(url: "https://github.com/it-boyer/fastlane.git", branch: "public"), linux 不支持
       .package(url: "https://github.com/Alamofire/Alamofire", branch: "master"),
-     // .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", from: "5.0.1"),
+      .package(url: "https://github.com/postmates/PMJSON.git", from: "4.0.0"),
         .package(url: "https://github.com/kareman/SwiftShell", .upToNextMajor(from: "5.1.0")),
         .package(url: "https://github.com/sharplet/Regex",.upToNextMajor(from: "2.1.1")),
         //.package(url: "https://github.com/groue/GRDB.swift.git", from: "5.17.0"),
-        //.package(path: "/Users/boyer/hsg/GRDB.swift"),
-
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -33,7 +31,7 @@ let package = Package(
             dependencies: [
                         //.product(name: "Fastlane", package: "fastlane"),
                         "Alamofire",
-                        //   "SwiftyJSON",
+                        "PMJSON",
                         "SwiftShell",
                         "Regex",
                         "UnitLib",
@@ -43,6 +41,6 @@ let package = Package(
         .target(name: "UnitLib",dependencies: ["SwiftShell", "Regex"]),
         .testTarget(
             name: "UnitDemoTests",
-            dependencies: ["UnitDemo", "UnitLib","Quick"]),
+            dependencies: ["UnitDemo", "UnitLib","Quick","Nimble"]),
     ]
 )
