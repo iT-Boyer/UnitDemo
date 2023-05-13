@@ -21,6 +21,8 @@ let package = Package(
       .package(url: "https://github.com/postmates/PMJSON.git", from: "4.0.0"),
         .package(url: "https://github.com/kareman/SwiftShell", .upToNextMajor(from: "5.1.0")),
         .package(url: "https://github.com/sharplet/Regex",.upToNextMajor(from: "2.1.1")),
+       //chatgpt api
+       .package(url: "https://github.com/adamrushy/OpenAISwift.git", from: "1.2.0")
         //.package(url: "https://github.com/groue/GRDB.swift.git", from: "5.17.0"),
     ],
     targets: [
@@ -35,6 +37,7 @@ let package = Package(
                         "SwiftShell",
                         "Regex",
                         "UnitLib",
+                        "OpenAISwift",
                         //.product(name: "GRDB", package: "GRDB.swift"),
                         .product(name: "ArgumentParser", package: "swift-argument-parser")]),
 
