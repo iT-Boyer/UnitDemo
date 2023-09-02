@@ -45,6 +45,6 @@ let package = Package(
         .target(name: "UnitLib",dependencies: ["SwiftShell", "Regex"]),
         .testTarget(
             name: "UnitDemoTests",
-            dependencies: ["UnitDemo", "UnitLib","Quick"]),
+            dependencies: ["UnitDemo", "UnitLib","Quick", "Nimble"]),
     ]
 )

@@ -6,6 +6,7 @@
 //
 import Foundation
 import Quick
+import Nimble
 import SwiftShell
 @testable import UnitLib
 
