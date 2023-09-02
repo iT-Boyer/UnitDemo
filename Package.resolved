@@ -1,9 +1,18 @@
 {
   "pins" : [
     {
+      "identity" : "ohhttpstubs",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gh.con.sh/https://github.com/AliSoftware/OHHTTPStubs",
+      "state" : {
+        "branch" : "master",
+        "revision" : "12f19662426d0434d6c330c6974d53e2eb10ecd9"
+      }
+    },
+    {
       "identity" : "quick",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Quick/Quick.git",
+      "location" : "https://gh.con.sh/https://github.com/Quick/Quick.git",
       "state" : {
         "revision" : "f9d519828bb03dfc8125467d8f7b93131951124c",
         "version" : "5.0.1"
@@ -12,7 +21,7 @@
     {
       "identity" : "regex",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/sharplet/Regex",
+      "location" : "https://gh.con.sh/https://github.com/sharplet/Regex",
       "state" : {
         "revision" : "76c2b73d4281d77fc3118391877efd1bf972f515",
         "version" : "2.1.1"
@@ -21,16 +30,16 @@
     {
       "identity" : "swift-argument-parser",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-argument-parser",
+      "location" : "https://gh.con.sh/https://github.com/apple/swift-argument-parser",
       "state" : {
-        "revision" : "fee6933f37fde9a5e12a1e4aeaa93fe60116ff2a",
-        "version" : "1.2.2"
+        "revision" : "8f4d2753f0e4778c76d5f05ad16c74f707390531",
+        "version" : "1.2.3"
       }
     },
     {
       "identity" : "swiftshell",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kareman/SwiftShell",
+      "location" : "https://gh.con.sh/https://github.com/kareman/SwiftShell",
       "state" : {
         "revision" : "99680b2efc7c7dbcace1da0b3979d266f02e213c",
         "version" : "5.1.0"

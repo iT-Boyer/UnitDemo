@@ -3,6 +3,7 @@
 
 import PackageDescription
 
+let proxy = "https://gh.con.sh/https://github.com/"
 let package = Package(
     name: "UnitDemo",
     products: [
@@ -13,15 +14,16 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-      .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
-      .package(url: "https://github.com/Quick/Quick.git", from: "5.0.0"),
-      //.package(url: "https://github.com/Quick/Nimble.git", from: "10.0.0"),
-      //.package(url: "https://github.com/it-boyer/fastlane.git", branch: "public"),
-      //.package(url: "https://github.com/Alamofire/Alamofire", branch: "master"),
-     // .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", from: "5.0.1"),
-        .package(url: "https://github.com/kareman/SwiftShell", .upToNextMajor(from: "5.1.0")),
-        .package(url: "https://github.com/sharplet/Regex",.upToNextMajor(from: "2.1.1")),
-        //.package(url: "https://github.com/groue/GRDB.swift.git", from: "5.17.0"),
+      .package(url: proxy + "AliSoftware/OHHTTPStubs", branch: "master"),
+      .package(url: proxy + "apple/swift-argument-parser", from: "1.0.0"),
+      .package(url: proxy + "Quick/Quick.git", from: "5.0.0"),
+      //.package(url: proxy + "Quick/Nimble.git", from: "10.0.0"),
+      //.package(url: proxy + "it-boyer/fastlane.git", branch: "public"),
+      //.package(url: proxy + "Alamofire/Alamofire", branch: "master"),
+     // .package(url: proxy + "SwiftyJSON/SwiftyJSON.git", from: "5.0.1"),
+        .package(url: proxy + "kareman/SwiftShell", .upToNextMajor(from: "5.1.0")),
+        .package(url: proxy + "sharplet/Regex",.upToNextMajor(from: "2.1.1")),
+        //.package(url: proxy + "groue/GRDB.swift.git", from: "5.17.0"),
         //.package(path: "/Users/boyer/hsg/GRDB.swift"),
 
     ],
