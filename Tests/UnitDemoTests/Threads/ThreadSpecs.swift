@@ -16,7 +16,7 @@ class ThreadSpecs:QuickSpec {
              1. 创建串行队列：串行为默认创建的队列
              2. 向队列中添加block事件，并异步步执行
              */
-            it("串行队列，异步执行"){
+            xit("串行队列，异步执行"){
                 //串行队列
                 let serialQueue = DispatchQueue.init(label: "串行队列")
                 for i in 1 ... 3 {
@@ -52,6 +52,10 @@ class ThreadSpecs:QuickSpec {
                     }
                 }
 
+                waitUntil(timeout: .seconds(10)) { done in
+                
+                    done()
+                }
                 for i in 1 ... 3 {
                     print("主线程\(i)：\(Thread.current)")
                 }

@@ -17,7 +17,7 @@ let package = Package(
       .package(url: proxy + "AliSoftware/OHHTTPStubs", branch: "master"),
       .package(url: proxy + "apple/swift-argument-parser", from: "1.0.0"),
       .package(url: proxy + "Quick/Quick.git", from: "5.0.0"),
-      //.package(url: proxy + "Quick/Nimble.git", from: "10.0.0"),
+      .package(url: proxy + "Quick/Nimble.git", from: "10.0.0"),
       //.package(url: proxy + "it-boyer/fastlane.git", branch: "public"),
       //.package(url: proxy + "Alamofire/Alamofire", branch: "master"),
      // .package(url: proxy + "SwiftyJSON/SwiftyJSON.git", from: "5.0.1"),
