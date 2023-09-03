@@ -15,7 +15,7 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-      .package(url: proxy + "AliSoftware/OHHTTPStubs", branch: "master"),
+      //.package(url: proxy + "AliSoftware/OHHTTPStubs", branch: "master"),
       .package(url: proxy + "apple/swift-argument-parser", from: "1.0.0"),
       .package(url: proxy + "Quick/Quick.git", .upToNextMajor(from: "5.0.0")),
       //.package(url: proxy2 + "iT-Boyer/Nimble.git", branch: "main"),
@@ -47,7 +47,6 @@ let package = Package(
         .target(name: "UnitLib",dependencies: ["SwiftShell", "Regex"]),
         .testTarget(
             name: "UnitDemoTests",
-            dependencies: ["UnitDemo", "UnitLib","Quick", "Nimble", .product(name: "OHHTTPStubsSwift",
-                                                                             package: "OHHTTPStubs")]),
+            dependencies: ["UnitDemo", "UnitLib","Quick", "Nimble"]),
     ]
 )
