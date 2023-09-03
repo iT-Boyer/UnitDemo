@@ -4,6 +4,7 @@
 import PackageDescription
 
 let proxy = "https://gh.con.sh/https://github.com/"
+let proxy2 = "https://github.com/"
 let package = Package(
     name: "UnitDemo",
     products: [
@@ -16,8 +17,9 @@ let package = Package(
         // .package(url: /* package url */, from: "1.0.0"),
       .package(url: proxy + "AliSoftware/OHHTTPStubs", branch: "master"),
       .package(url: proxy + "apple/swift-argument-parser", from: "1.0.0"),
-      .package(url: proxy + "Quick/Quick.git", from: "5.0.0"),
-      .package(url: proxy + "Quick/Nimble.git", from: "10.0.0"),
+      .package(url: proxy + "Quick/Quick.git", .upToNextMajor(from: "5.0.0")),
+      //.package(url: proxy2 + "iT-Boyer/Nimble.git", branch: "main"),
+      .package(path: "/Users/boyer/hsg/Nimble"),
       //.package(url: proxy + "it-boyer/fastlane.git", branch: "public"),
       //.package(url: proxy + "Alamofire/Alamofire", branch: "master"),
      // .package(url: proxy + "SwiftyJSON/SwiftyJSON.git", from: "5.0.1"),
@@ -45,6 +47,7 @@ let package = Package(
         .target(name: "UnitLib",dependencies: ["SwiftShell", "Regex"]),
         .testTarget(
             name: "UnitDemoTests",
-            dependencies: ["UnitDemo", "UnitLib","Quick", "Nimble"]),
+            dependencies: ["UnitDemo", "UnitLib","Quick", "Nimble", .product(name: "OHHTTPStubsSwift",
+                                                                             package: "OHHTTPStubs")]),
     ]
 )

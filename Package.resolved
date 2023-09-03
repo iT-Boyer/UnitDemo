@@ -19,15 +19,6 @@
       }
     },
     {
-      "identity" : "nimble",
-      "kind" : "remoteSourceControl",
-      "location" : "https://gh.con.sh/https://github.com/Quick/Nimble.git",
-      "state" : {
-        "revision" : "1f3bde57bde12f5e7b07909848c071e9b73d6edc",
-        "version" : "10.0.0"
-      }
-    },
-    {
       "identity" : "ohhttpstubs",
       "kind" : "remoteSourceControl",
       "location" : "https://gh.con.sh/https://github.com/AliSoftware/OHHTTPStubs",
