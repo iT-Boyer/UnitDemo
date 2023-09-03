@@ -19,14 +19,14 @@ let package = Package(
       .package(url: proxy + "apple/swift-argument-parser", from: "1.0.0"),
       .package(url: proxy + "Quick/Quick.git", .upToNextMajor(from: "5.0.0")),
       //.package(url: proxy2 + "iT-Boyer/Nimble.git", branch: "main"),
-      //.package(path: "/Users/boyer/hsg/Nimble"),
+      //.package(path: "~/hsg/Nimble"),
       //.package(url: proxy + "it-boyer/fastlane.git", branch: "public"),
       //.package(url: proxy + "Alamofire/Alamofire", branch: "master"),
      // .package(url: proxy + "SwiftyJSON/SwiftyJSON.git", from: "5.0.1"),
         .package(url: proxy + "kareman/SwiftShell", .upToNextMajor(from: "5.1.0")),
         .package(url: proxy + "sharplet/Regex",.upToNextMajor(from: "2.1.1")),
         //.package(url: proxy + "groue/GRDB.swift.git", from: "5.17.0"),
-        //.package(path: "/Users/boyer/hsg/GRDB.swift"),
+        //.package(path: "~/hsg/GRDB.swift"),
 
     ],
     targets: [
