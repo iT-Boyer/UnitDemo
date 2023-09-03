@@ -6,7 +6,6 @@
 //
 import Foundation
 import Quick
-import Nimble
 import SwiftShell
 @testable import UnitLib
 
@@ -53,10 +52,6 @@ class ThreadSpecs:QuickSpec {
                     }
                 }
 
-                waitUntil(timeout: .seconds(10)) { done in
-                
-                    done()
-                }
                 for i in 1 ... 3 {
                     print("主线程\(i)：\(Thread.current)")
                 }

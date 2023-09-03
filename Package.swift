@@ -19,7 +19,7 @@ let package = Package(
       .package(url: proxy + "apple/swift-argument-parser", from: "1.0.0"),
       .package(url: proxy + "Quick/Quick.git", .upToNextMajor(from: "5.0.0")),
       //.package(url: proxy2 + "iT-Boyer/Nimble.git", branch: "main"),
-      .package(path: "/Users/boyer/hsg/Nimble"),
+      //.package(path: "/Users/boyer/hsg/Nimble"),
       //.package(url: proxy + "it-boyer/fastlane.git", branch: "public"),
       //.package(url: proxy + "Alamofire/Alamofire", branch: "master"),
      // .package(url: proxy + "SwiftyJSON/SwiftyJSON.git", from: "5.0.1"),
@@ -47,6 +47,6 @@ let package = Package(
         .target(name: "UnitLib",dependencies: ["SwiftShell", "Regex"]),
         .testTarget(
             name: "UnitDemoTests",
-            dependencies: ["UnitDemo", "UnitLib","Quick", "Nimble"]),
+            dependencies: ["UnitDemo", "UnitLib","Quick"]),
     ]
 )
